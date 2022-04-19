@@ -1,3 +1,4 @@
+#Created by github.com/ItzzMeGrrr
 try:
     import sys
     from os import path
