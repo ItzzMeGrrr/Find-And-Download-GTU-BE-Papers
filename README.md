@@ -1,6 +1,6 @@
 # Find and download GTU BE exam papers
-This repository contains a python script which can be used to download BE GTU exam papers.
-To use this script first install the required python modules by typing following in the terminal.
+This repository contains a python script that can be used to download BE GTU exam papers.
+To use this script first install the required python modules by typing the following in the terminal.
 ```
 pip install -r requirements.txt
 ```
@@ -11,17 +11,17 @@ Download BE papers from https://www.gtu.ac.in/uploads/[term]/BE/[SubCode].pdf
 Options:
 -d              Download and save file(s) after fetching
 -v              Show verbose output
--l N            Last year to check untill(Default is 4 years from current year)
-                    (e.g: '-l 2019' would check from current year to 2019)     
+-l N            Last year to check until(Default is 4 years from the current year)
+                    (e.g: '-l 2019' would check from the current year to 2019)     
 -h|--help       Show this help message
-Example: '.\FindAndDownloadPapers.py -dvl 2019' would download all the papers from current year to 2019.
+Example: '.\FindAndDownloadPapers.py -dvl 2019' would download all the papers from the current year to 2019.
 ```
 
 
-NOTE: By default the script will just find and save the valid urls of the found papers in __validUrls.txt__. To download the papers use the -d option.
+NOTE: By default, the script will just find and save the valid URLs of the found papers in __validUrls.txt__. To download the papers use the -d option.
 
 Example:
-Let's say you want to download all the papers of subject code __3150713__ from current year till 2019. You can use the following command.
+Let's say you want to download all the papers of subject code __3150713__ from the current year till 2019. You can use the following command.
 ```
 .\FindAndDownloadPapers.py -dvl 2019
 ```
@@ -29,7 +29,7 @@ You will be asked to enter the subject code. Enter the code and press enter.
 Output:
 ```
 ./FindAndDownloadPapers.py -vdl 2019
-Enter subject codes separeted with commas: 3150713
+Enter subject codes separated with commas: 3150713
 Following valid Subject Codes found:
 3150713
 -------------Fetching URLs-----------
