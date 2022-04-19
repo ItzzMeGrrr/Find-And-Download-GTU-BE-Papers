@@ -47,7 +47,7 @@ def checkParams():
                     \r{POSITIVE_HL}-l N{VERBOSE}\t\tLast year to check untill(Default is 4 years from current year)
                     (e.g: '-l 2019' would check from current year to 2019)
                     \r{POSITIVE_HL}-h|--help{VERBOSE}\tShow this help message
-                    \rExample: '{POSITIVE}{args[0]} {POSITIVE_HL}-dvl 2019'{RESET}
+                    \rExample: '{POSITIVE}{args[0]} {POSITIVE_HL}-dvl 2019' would download all the papers from current year to 2019.{RESET}
                     """
     skip_iter = False
     if args.__len__() >= 2:
@@ -94,8 +94,8 @@ def getSubjects() -> list[str]:
         exit()
     else:
         subcodes = []
-        splitted = subjectString.split(',')
-        for code in splitted:
+        splittedCodes = subjectString.split(',')
+        for code in splittedCodes:
             code = code.strip()
             if not len(code) == 7 or re.search("\D", code):
                 print(f"{ERROR}Invalid code: {ERROR_HL}{code}{RESET}")
@@ -130,7 +130,7 @@ def main():
         exams.append(f"S{year}")
         exams.append(f"W{year}")
 
-    with open(urlSaveFile, "w"):
+    with open(urlSaveFile, "w"):#creating file if it does not exist
         pass
 
     print(f"{TITLE}-------------Fetching URLs-----------{RESET}")
